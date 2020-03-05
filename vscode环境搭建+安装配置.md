@@ -3,26 +3,26 @@
 ## 一、安装Node.js、cnpm、webpack、vue-cli
 **1. 安装Node.js**  
 
-官网https://nodejs.org/en/download/选择.msi进行安装。安装成功后打开cmd，输入node -v和npm –v查看版本号。
+官网 https://nodejs.org/en/download/ 选择.msi进行安装。安装成功后打开cmd，输入node -v和npm –v查看版本号。
 
 **2. 安装cnpm（比npm快，因为使用淘宝的服务器做为的包源 ）**  
 
-在cmd中，输入命令：npm install –g cnpm --registry=https://registry.npm.taobao.org。安装成功输入cnpm –v查看相关信息。
+在cmd中，输入命令：`npm install –g cnpm --registry=https://registry.npm.taobao.org` 。安装成功输入cnpm –v查看相关信息。
 
 **3. 安装webpack（js应用程序的静态模块打包器module bundler）**  
 
-在cmd中，输入命令：cnpm install webpack –g进行安装。
+在cmd中，输入命令：`cnpm install webpack –g` 进行安装。
 
 **4. 安装vue-cli（用来生成vue模版的工具）**  
 
-在cmd中，输入命令：cnpm install vue-cli –g进行安装。安装成功后，输入命令：cnpm install -g @vue/cli-init。
+在cmd中，输入命令：`cnpm install vue-cli –g` 进行安装。安装成功后，输入命令：`cnpm install -g @vue/cli-init`。
 
  
 
 ## 二、在cmd新建vue项目进行测试
-**1. 在cmd，cd进入你想保存项目的文件目录。输入命令：cnpm install -g @vue/cli-init。**  
+**1. 在cmd，cd进入你想保存项目的文件目录。输入命令：`cnpm install -g @vue/cli-init`。**  
 
-**2. 输入命令：vue init webpack testDemo**，新建项目。（最好不要有大写，不然接下来第一个会提示你Project name不能有大写，需要一个小写的名字）。
+**2. 输入命令：`vue init webpack testDemo`**，新建项目。（最好不要有大写，不然接下来第一个会提示你Project name不能有大写，需要一个小写的名字）。
 
 前面的回车即可，后面两个填no（因为之后要使用cnpm来下载依赖，npm太慢了）。最后一个本来选中的是“Yes, use NPM"（蓝色为选中），使用向下键选中第三个（如图）后回车。
 
@@ -32,7 +32,7 @@
 
 ![安装-2](/pictures/notes/安装-2.png)
 
-即逐条运行如下命令，第一条：cd testDemo，第二条：cnpm install，第三条：cnpm run lint -- --fix，第四条：cnpm run dev
+即逐条运行如下命令，第一条：`cd testDemo`，第二条：`cnpm install`，第三条：`cnpm run lint -- --fix`，第四条：`cnpm run dev`
 
 **4. 根据给出的提示，在浏览器通过http://localhost:8080地址访问。** 访问成功即测试成功。
 
@@ -122,7 +122,7 @@
     "singleQuote":true
 }
 ```
-重启（？可能需要）vscode后生效。（其实vscode右键就有'格式化文档'。）  
+重启（可能需要）vscode后生效。（其实vscode右键就有'格式化文档'。）  
 
 
 
@@ -132,20 +132,20 @@
 
 **2. 打开Terminal**（可以顶部工具栏Terminal-> New Terminal打开）  
 
-**3. 输入命令：cnpm install**，用于检查和下载依赖。（这一步我碰到了很多问题，会在文末说明我遇到过的问题以及解决方法）  
+**3. 输入命令： cnpm install **，用于检查和下载依赖。（这一步我碰到了很多问题，会在文末说明我遇到过的问题以及解决方法）  
 
-**4. 输入命令：cnpm run dev**，运行项目。  
+**4. 输入命令： cnpm run dev **，运行项目。  
 
 **5. 根据给出的提示，在浏览器通过http://localhost:8080地址访问。**  
 
-
+![安装-4](/pictures/notes/安装-4.png)
 
  
 
 # 五、使用cnpm时遇到的坑
 **问题：使用cnpm install时报错'cnpm : 无法加载文件 ... ，因为在此系统上禁止运行脚本。...'**
 报错如下：
-
+![安装-5](/pictures/notes/安装-5.png)
 
 
 **解决方案**
@@ -155,7 +155,9 @@
 
 3. 解决第2步出现的问题（第2步没问题的直接看第4步）：在cmd中输入命令：get-help set-executionpolicy。运行完这个命令后，再在PowerShell中尝试运行2中的命令，如果成功，则执行第4步。  
 
-4. 更改权限为A。输入命令：Ge-ExecutionPolicy。  
+4. 更改权限为A。输入命令：Ge-ExecutionPolicy。  
+
+![安装-6](/pictures/notes/安装-6.png)
 
 5. 再回到vscode，在Terminal中输入命令：cnpm -v。如果能成功，说明问题解决了，cnpm install也能正常运行了。  
 
