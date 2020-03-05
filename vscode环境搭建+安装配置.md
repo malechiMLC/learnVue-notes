@@ -19,32 +19,31 @@
 
  
 
-## 二、在cmd新建vue项目进行测试  
+## 二、在cmd新建vue项目进行测试
+**1. 在cmd，cd进入你想保存项目的文件目录。输入命令：cnpm install -g @vue/cli-init。**  
 
-1. 在cmd，cd进入你想保存项目的文件目录。输入命令：cnpm install -g @vue/cli-init。
-
-2. 输入命令：vue init webpack testDemo，新建项目。（最好不要有大写，不然接下来第一个会提示你Project name不能有大写，需要一个小写的名字）。
+**2. 输入命令：vue init webpack testDemo**，新建项目。（最好不要有大写，不然接下来第一个会提示你Project name不能有大写，需要一个小写的名字）。
 
 前面的回车即可，后面两个填no（因为之后要使用cnpm来下载依赖，npm太慢了）。最后一个本来选中的是“Yes, use NPM"（蓝色为选中），使用向下键选中第三个（如图）后回车。
 
+![安装-1](/pictures/notes/安装-1.png)
 
+**3. 之后会显示建议如下图**（把里面的npm全部换成cnpm后再一条条执行，不然npm太慢了）
 
-3. 之后会显示建议如下图（把里面的npm全部换成cnpm后再一条条执行，不然npm太慢了）
-
-
+![安装-2](/pictures/notes/安装-2.png)
 
 即逐条运行如下命令，第一条：cd testDemo，第二条：cnpm install，第三条：cnpm run lint -- --fix，第四条：cnpm run dev
 
-4. 根据给出的提示，在浏览器通过http://localhost:8080地址访问。访问成功即测试成功。
+**4. 根据给出的提示，在浏览器通过http://localhost:8080地址访问。** 访问成功即测试成功。
 
  
 
 ## 三、安装vscode、插件vetur、插件eslint、插件prettier
-1. 插件通过左侧extensions安装（可通过Crtl+Shift+X快捷键打开左侧extensions）。三个插件安装完成后重启vscode。
+**1. 插件通过左侧extensions安装**（可通过Crtl+Shift+X快捷键打开左侧extensions）。三个插件安装完成后重启vscode。
 
-2. 更改配置文件setting.json（打开方式：界面左下角设置图标->Settings->搜索框中搜索eslint->点击edit in setting.json）。
+**2. 更改配置文件setting.json**（打开方式：界面左下角设置图标->Settings->搜索框中搜索eslint->点击edit in setting.json）
 
-
+![安装-3](/pictures/notes/安装-3.png)
 
 更改setting.json文件如下：
  ```json
@@ -116,26 +115,28 @@
     "extensions.autoUpdate": true,
 }
 ```
-3. 想要每次保存时自动将双引号变为单引号，则在项目根目录下新建“.prettierrc"，文件内容如下：  
+**3. 想要每次保存时自动将双引号变为单引号，则在项目根目录下新建“.prettierrc"，文件内容如下：**   
 ```json
 {
     "semi":false,
     "singleQuote":true
 }
 ```
-重启（？可能需要）vscode后生效。（其实vscode右键就有'格式化文档'）  
+重启（？可能需要）vscode后生效。（其实vscode右键就有'格式化文档'。）  
+
+
 
 # 四、在vscode中运行vue项目  
 
-1. File -> Open Folder，打开刚才使用cmd创建的项目testDemo。  
+**1. File -> Open Folder，打开刚才使用cmd创建的项目testDemo。**  
 
-2. 打开Terminal（可以顶部工具栏Terminal-> New Terminal打开）  
+**2. 打开Terminal**（可以顶部工具栏Terminal-> New Terminal打开）  
 
-3. 输入命令：cnpm install，用于检查和下载依赖。（这一步我碰到了很多问题，会在文末说明我遇到过的问题以及解决方法）  
+**3. 输入命令：cnpm install**，用于检查和下载依赖。（这一步我碰到了很多问题，会在文末说明我遇到过的问题以及解决方法）  
 
-4. 输入命令：cnpm run dev，运行项目。  
+**4. 输入命令：cnpm run dev**，运行项目。  
 
-5. 根据给出的提示，在浏览器通过http://localhost:8080地址访问。  
+**5. 根据给出的提示，在浏览器通过http://localhost:8080地址访问。**  
 
 
 
@@ -150,14 +151,13 @@
 **解决方案**
 1. 在win10搜索框中搜索Windows PowerShell，以管理员身份运行。  
 
-2. 输入命令：set-executjionpolicy remotesigned。（很遗憾在这一步又出现问题了，具体报错忘记截图了，大概就是说这个命令不能运行啥的。解决方案见下一步。）（如果这一步你能成功，请直接跳到第4步）  
+2. 输入命令：set-executjionpolicy remotesigned。（很遗憾在这一步又出现问题了，具体报错忘记截图了，大概就是说这个命令不能运行啥的。解决方案见下一步。）（如果这一步你能成功，请直接跳到第4步）  
 
 3. 解决第2步出现的问题（第2步没问题的直接看第4步）：在cmd中输入命令：get-help set-executionpolicy。运行完这个命令后，再在PowerShell中尝试运行2中的命令，如果成功，则执行第4步。  
 
 4. 更改权限为A。输入命令：Ge-ExecutionPolicy。  
 
-
-
 5. 再回到vscode，在Terminal中输入命令：cnpm -v。如果能成功，说明问题解决了，cnpm install也能正常运行了。  
+
 
 
