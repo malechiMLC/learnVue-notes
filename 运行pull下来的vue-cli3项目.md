@@ -7,9 +7,10 @@
 **第三步：`cnpm install -g @vue/cli-service-global`**  
 
 **第四步：进入App.vue所在的目录后，运行`vue serve`**  
+  
+  
 
-
-**发现pull下来的一个项目的目录框架跟我自己新建的不一样，就询问同伴。得知是vue-cli版本的区别。**  
+**发现pull下来的一个项目的目录框架跟我自己新建的不一样，得知是vue-cli版本的区别。**  
 
 ## vue-cli2  
 初始化方法：`vue init webpack myproject`  
