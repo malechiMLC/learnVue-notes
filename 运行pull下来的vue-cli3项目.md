@@ -1,12 +1,16 @@
 # 运行一个pull下来的vue-cli3项目步骤  
+**特别注意：一定要是在项目目录下！！！就是`OnLine-BookStore\online-bookstore>`**  
 
-**第一步：`cnpm install`** 
+第一步：`OnLine-BookStore\online-bookstore>` : `cnpm install`  
 
-**第二步：`cnpm install -g @vue/cli`**  
+第二步：`OnLine-BookStore\online-bookstore>` : `cnpm install -g @vue/cli`  
 
-**第三步：`cnpm install -g @vue/cli-service-global`**  
+第三步：`OnLine-BookStore\online-bookstore>` : `cnpm install -g @vue/cli-service-global`  
 
-**第四步：进入App.vue所在的目录后，运行`vue serve`**  
+第四步：我引用的是ant-design-vue组件库，`OnLine-BookStore\online-bookstore>` : `cnpm install ant-design-vue --save`
+
+第四步：`OnLine-BookStore\online-bookstore>` : `cnpm run serve`  
+  
   
   
 
