@@ -12,23 +12,19 @@
 第四步：`OnLine-BookStore\online-bookstore>` : `cnpm run serve`  
   
   
-  
-
 **发现pull下来的一个项目的目录框架跟我自己新建的不一样，得知是vue-cli版本的区别。**  
 
 ## vue-cli2  
 初始化方法：`vue init webpack myproject`  
 目录框架为：  
 ![vue/cli3目录框架](/pictures/notes/vue-cli3目录框架.jpg)  
-
-运行方法：`cnpm run dev`  
+ 
 
 ## vue-cli3  
 初始化方法：`vue create myproject`  
 目录框架为：  
 ![vue-cli2目录框架](/pictures/notes/vue-cli2目录框架.jpg)  
 
-运行方法：`vue serve`  
 
 
 
