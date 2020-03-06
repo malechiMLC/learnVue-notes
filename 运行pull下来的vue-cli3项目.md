@@ -3,11 +3,11 @@
 ## vue-cli2  
 初始化方法：`vue init webpack myproject`  
 目录框架为：  
-
+![vue/cli3目录框架](/pictures/notes/vue-cli3目录框架.jpg)
 ## vue-cli3  
 初始化方法：`vue create myproject`  
 目录框架为：  
-
+![vue-cli2目录框架](/pictures/notes/vue-cli2目录框架.jpg)
 运行方法：`vue serve`  
 
 
